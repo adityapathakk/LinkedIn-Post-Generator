@@ -1,0 +1,69 @@
+# AI Freelance: SLM-Enhanced LinkedIn Post Generator
+
+## Objective
+Design a system that:
+Accepts a short idea for a LinkedIn post
+Uses a custom-built Small Language Model (SLM) to:
+Refine the prompt before passing to an LLM
+OR clean/polish/structure the output after generation
+Uses an open-source LLM for actual content generation
+
+(Bonus) Auto-extracts persona from previous LinkedIn posts to match tone/style
+
+## Task Overview
+### Input:
+A short description of what user wants to post:
+ e.g., "Gave a talk at a college about branding"
+(Optional but bonus): 3–5 previous LinkedIn posts (text format)
+
+### ⚙️ System Flow:
+[Raw User Input]
+      ↓
+ [SLM] → Refines the prompt (adds tone, voice, structure hints)
+      ↓
+ [Open-source LLM] → Generates human-like post
+      ↓
+ [SLM] → Optionally reworks the output: trims fluff, adds emoji, ensures tone
+      ↓
+[Final LinkedIn-Ready Post]
+
+### 🔨 SLM Requirements:
+You must develop or fine-tune a custom small model (under 100M parameters preferred) that can:
+Either:
+Preprocess the prompt: add voice markers, formatting cues, inferred tone
+ OR
+Postprocess the LLM output: polish structure, fix tone mismatches, trim verbosity
+Should run locally or via HuggingFace inference
+
+### Tools allowed:
+DistilBERT, TinyLlama, MiniLM, ALBERT, BERT2BERT, etc.
+Optional: train a small seq2seq or transformer-based model on synthetic data
+
+### Output:
+A LinkedIn-style humanized post according to user persona post (150–300 words)
+Clear paragraph structure, clean grammar
+Emotionally resonant, real human tone
+Mimics the user’s past tone if posts are provided
+
+### Bonus Features (Optional but Impressive):
+Feature
+Persona extraction from past posts
+Prompt templates based on profession (e.g., designer, coach)
+Postprocessor SLM for trimming/correcting LLM output
+Minimal UI to demo flow
+
+## Time Limit: Forms will be open till 26th May 2025 11:59 PM
+
+## Deliverables:
+### Python code (well-documented) for:
+The SLM architecture (training or inference)
+Integration with the LLM
+
+### A README.md explaining:
+Architecture design
+SLM's logic and role
+Any training datasets used (can be synthetic)
+
+### At least 3 test cases showing:
+Raw input → SLM → LLM → Output
+With and without persona input
