@@ -1,6 +1,7 @@
 # LinkedIn Post Generator
 Preface?<br>
-Received this as a take-away project at the wrong time (super busy with a client demo at my current workplace), but I probably will keep expanding on this when I get time - as this finally got me to start learning and getting hands-on with fine-tuning! :)
+Received this as a take-away project at the wrong time (super busy with a client demo at my current workplace), but I probably will keep expanding on this when I get time - as this finally got me to start learning and getting hands-on with fine-tuning! :)<br>
+#### [edit] - Got the interview!
 
 ## 🏛️ Architecture Design
 
